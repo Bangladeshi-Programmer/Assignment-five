@@ -40,7 +40,7 @@ function toggleActiveButton(activeId) {
 
 // Donation functionality
 function donate(event) {
-    const card = event.target.closest('.flex');
+    const card = event.target.closest('.flex') || event.target.closest('.lg\\:flex');
     const input = card.querySelector('input[type="number"]');
     const currentAmountElem = card.querySelector('.current-amount');
 
