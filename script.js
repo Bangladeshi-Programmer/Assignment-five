@@ -33,8 +33,8 @@ function showHistory() {
 // Toggle active button status
 function toggleActiveButton(activeId) {
     document.querySelectorAll('nav button').forEach(button => {
-        button.classList.toggle('bg-blue-500', button.id === activeId);
-        button.classList.toggle('text-white', button.id === activeId);
+        button.classList.toggle('bg-lime-500', button.id === activeId);
+        button.classList.toggle('text-black', button.id === activeId);
     });
 }
 
@@ -56,7 +56,7 @@ function donate(event) {
         return;
     }
 
-    // Update balance and card amount
+    // Update balance and card money
     accountBalance -= donationAmount;
     balanceDisplay.textContent = accountBalance;
     currentAmountElem.textContent = parseFloat(currentAmountElem.textContent) + donationAmount;
@@ -64,7 +64,7 @@ function donate(event) {
     // Log donation in history
     const date = new Date();
     const historyItem = document.createElement('li');
-    historyItem.textContent = `Donated $${donationAmount} on ${date.toLocaleString()}`;
+    historyItem.textContent = `Donated Tk${donationAmount} on ${date.toLocaleString()}`;
     historyList.appendChild(historyItem);
 
     // Show success modal
