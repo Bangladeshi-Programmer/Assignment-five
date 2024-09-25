@@ -1,12 +1,13 @@
+//All getElementById Here 
 const balanceDisplay = document.getElementById('balance');
 const donationSection = document.getElementById('donationSection');
 const historySection = document.getElementById('historySection');
 const historyList = document.getElementById('historyList');
 const successModal = document.getElementById('successModal');
 const closeModalBtn = document.getElementById('closeModal');
-let accountBalance = 5500;
+let accountBalance = 55000;
 
-// Event listeners for buttons
+// All Event listeners for buttons
 document.getElementById('donationBtn').addEventListener('click', showDonation);
 document.getElementById('historyBtn').addEventListener('click', showHistory);
 document.querySelectorAll('.donate-btn').forEach(button => {
@@ -30,7 +31,7 @@ function showHistory() {
     toggleActiveButton('historyBtn');
 }
 
-// Toggle active button status
+// Toggle active button 
 function toggleActiveButton(activeId) {
     document.querySelectorAll('nav button').forEach(button => {
         button.classList.toggle('bg-lime-500', button.id === activeId);
